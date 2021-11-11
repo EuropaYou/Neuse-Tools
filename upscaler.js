@@ -16,7 +16,7 @@ const exec = require("child_process").exec;
         var t1 = Date.now();
         console.log("Decoding");
         await exec(`ffmpeg -i input.mp4 -s 256x144 -filter:v fps=1 temp/raw-frames/%d.png`);
-        
+
         console.log("Rendering");
         const frames = fs.readdirSync("temp/raw-frames");
         for (let count = 1; count <= frames.length; count++) {

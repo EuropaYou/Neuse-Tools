@@ -1,7 +1,6 @@
 const util = require("util");
 const exec = util.promisify(require("child_process").exec)
-
-exec("ffplay input.mp4 -window_title NeusePlayer -loop 0 -x 256 -s 144")
+//exec("ffplay input.mp4 -window_title NeusePlayer -loop 0 -x 256 -s 144")
 
 /*
 -x width | Force displayed width, -y height | Force displayed height.
@@ -9,8 +8,8 @@ exec("ffplay input.mp4 -window_title NeusePlayer -loop 0 -x 256 -s 144")
 -fs | fullscreen, -an | Disable audio, -vn | Disable video, -sn | Disable subtitles,
 -ss pos | Seek to pos. Note that in most formats it is not possible to seek exactly, ffplay will seek to the nearest seek point to pos. pos must be a time duration specification.
 -t duration | Play duration seconds of audio/video. duration must be a time duration specification, see (ffmpeg-utils)the Time duration section in the ffmpeg-utils(1) manual.
-loop number | Loops movie playback <number> times. 0 means forever.
--showmode mode | Set the show mode to use. Available values for mode are: ‘0, video’ show video, ‘1, waves’ show audio waves, ‘2, rdft’ show audio frequency band using RDFT
+loop number | Loop <number> times. 0 = forever.
+-showmode mode | Available values for mode are: ‘0, video’, ‘1, waves’, ‘2, rdft’
 while playing: (q)uit, (f)ullscreen, (p)ause, (m)ute, 9-0(volume), left-right(seek backward/forward 10sec), down-up(seek backward/forward 1min),
 pageDWN,pageUP(Seek to the previous/next chapter. Or dont Seek backward/forward 10 minutes), RMB(Seek to percentage in file corresponding to fraction of width), LMB(Toggle Fullscreen)
 */
