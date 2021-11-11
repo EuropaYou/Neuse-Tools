@@ -1,8 +1,8 @@
 const util = require("util")
 const excfl = util.promisify(require("child_process").execFile);
-const exec = require("child_process").exec;
+const exec = util.promisify(require("child_process").exec);
 const Process = require("process");
-const fse = require("fs-extra")
+const fse = require("fs-extra");
 
 //#region Screenshot
 // Takes single screenshot
@@ -27,13 +27,14 @@ function takeScreenshotsOfDesktop(secs, fps) {
                     fse.mkdirSync("screenshots")
                     //exec("ffmpeg -f gdigrab -i desktop -frames:v 1 foobar.jpeg")
                     for (let i = 1; i < secs; i++) {
-                        console.log(i, secs, fps)
-                        console.log(Math.floor(secs / fps))
-                        var x = Date.now()
-                        var scr = "./screenshots/" + "Screenshot_" + x + ".png";
-                        console.log(scr)
-                        excfl("./ffmpeg.exe", ["-f", "gdigrab", "-i", "desktop", "-frames:d", fps, scr])
-                        console.log("Completed in", (Date.now() - x) / 1000 + "s")
+                        setTimeout(() => {
+                            console.log(i, secs, fps)
+                            var x = Date.now()
+                            var scr = "./screenshots/" + "Screenshot_" + x + ".png";
+                            console.log(scr)
+                            excfl("./ffmpeg.exe", ["-f", "gdigrab", "-i", "desktop", scr])
+                            console.log("Completed in", (Date.now() - x) / 1000 + "s")
+                        }, Math.floor(secs / fps));
                     }
                     break;
                 default:
@@ -44,15 +45,29 @@ function takeScreenshotsOfDesktop(secs, fps) {
         default:
             console.log("Exit code: 2")
             Process.exit(1)
-    }
+}
 }
 //#endregion
 
-function captureWebcam(wbcm) {}
-function captureDesktop() {}
+async function captureWebcam(wbcm) {
+    /*
+    .\ffmpeg -list_options true -f dshow -i video="USB 2.0 Webcam Device"
+    show available resolutions
+
+    .\ffmpeg.exe -f dshow -s 1280x720 -i video="USB 2.0 Webcam Device" -b:v 3M out.mp4
+    record the webcam
+    */
+	await excfl("ffmpeg.exe", ["-list_options", "true", "-f", "dshow", "-i", "video=USB 2.0 Webcam Device"])
+    excfl("ffmpeg.exe", ["-f", "dshow", "-s", "1280x720", "-i", "video=USB 2.0 Webcam Device", "-b:v", "3M", "out.mp4"])
+}
+async function captureDesktop(bitrate, filepath, filename, systemAudio, microphone, fps) {
+    excfl("ffmpeg.exe", ["-f", "gdigrab", "-i", "desktop", "-b:v", "6M", "output.mp4"])
+}
 function captureApp(app) {}
 function captureWebcamDesktop(wbcm) {}
 function captureWebcamApp(wbcm, app) {}
 
 //takeScreenshotsOfDesktop(10, 4)
-takeScreenshot()
+//takeScreenshot()
+//captureDesktop()
+captureWebcam()

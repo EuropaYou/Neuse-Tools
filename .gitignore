@@ -1,7 +1,9 @@
 outputs
-/node_modules
+node_modules
 ffmpeg.exe
 ffplay.exe
-/ffprobe.exe
+ffprobe.exe
+screenshots
 input.mp4
 output.mp4
+.gitignore

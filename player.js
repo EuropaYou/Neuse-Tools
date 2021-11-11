@@ -1,6 +1,6 @@
 const util = require("util");
 const exec = util.promisify(require("child_process").exec)
-//exec("ffplay input.mp4 -window_title NeusePlayer -loop 0 -x 256 -s 144")
+exec("ffplay input.mp4 -window_title NeusePlayer -loop 0 -x 256 -s 144")
 
 /*
 -x width | Force displayed width, -y height | Force displayed height.
