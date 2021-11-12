@@ -1,0 +1,9 @@
+Dependencies:
+    child_process,
+    fs-extra,
+    jimp,
+    resemblejs,
+    sharp,
+    upscaler,
+    util,
+    website-scraper
