@@ -32,43 +32,43 @@ function getVideoDetails() {
             case "16:9":
                 //#region 
                 await fs.mkdir("./outputs/16.9");
-                if (320 > width) {
+                if (320 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 320x240");
-                    await exec('ffmpeg -i input.mp4 -c:a copy -s 320x240 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_240p.mp4')
+                    await exec('ffmpeg -i input.mp4 -c:a copy -s 320x240 -b:v 3M -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_240p.mp4')
                     console.log("Completed in", (Date.now() - t1) / 1000 + "s")
                 }
-                if (640 > width) {
+                if (640 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 640x360");
                     await exec('ffmpeg -i input.mp4 -c:a copy -s 640x360 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_360p.mp4')
                     console.log("Completed in", (Date.now() - t1) / 1000 + "s")
                 }
-                if (848 > width) {
+                if (848 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 848x480");
                     await exec('ffmpeg -i input.mp4 -c:a copy -s 848x480 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_480p.mp4')
                     console.log("Completed in", (Date.now() - t1) / 1000 + "s")
                 }
-                if (1280 > width) {
+                if (1280 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 1280x720");
                     await exec('ffmpeg -i input.mp4 -c:a copy -s 1280x720 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_720p.mp4')
                     console.log("Completed in", (Date.now() - t1) / 1000 + "s")
                 }
-                if (1920 > width) {
+                if (1920 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 1920x1080");
                     await exec('ffmpeg -i input.mp4 -c:a copy -s 1920x1080 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_1080p.mp4')
                     console.log("Completed in", (Date.now() - t1) / 1000 + "s")
                 }
-                if (2560 > width) {
+                if (2560 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 2560x1440");
                     await exec('ffmpeg -i input.mp4 -c:a copy -s 2560x1440 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_1440p.mp4')
                     console.log("Completed in", (Date.now() - t1) / 1000 + "s")
                 }
-                if (3840 > width) {
+                if (3840 < width) {
                     t1 = Date.now()
                     console.log("Downscaling to 3840x2160");
                     await exec('ffmpeg -i input.mp4 -c:a copy -s 3840x2160 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/16.9/output_2160p.mp4')
@@ -79,31 +79,31 @@ function getVideoDetails() {
             case "9:16":
                 //#region 
                 await fs.mkdir("./outputs/9.16");
-                if (240 > width) {
+                if (240 < width) {
                     console.log("Downscaling to 240x320");
                     await exec('ffmpeg -i input.mp4 -s 240x320 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/9.16/output_240p.mp4')
                 }
-                if (360 > width) {
+                if (360 < width) {
                     console.log("Downscaling to 360x640");
                     await exec('ffmpeg -i input.mp4 -s 360x640 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/9.16/output_360p.mp4')
                 }
-                if (480 > width) {
+                if (480 < width) {
                     console.log("Downscaling to 480x848");
                     await exec('ffmpeg -i input.mp4 -s 480x848 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/9.16/output_480p.mp4')
                 }
-                if (720 > width) {
+                if (720 < width) {
                     console.log("Downscaling to 720x1280");
                     await exec('ffmpeg -i input.mp4 -s 720x1280 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/9.16/output_720p.mp4')
                 }
-                if (1080 > width) {
+                if (1080 < width) {
                     console.log("Downscaling to 1080x1920");
                     await exec('ffmpeg -i input.mp4 -s 1080x1920 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/9.16/output_1080p.mp4')
                 }
-                if (1440 > width) {
+                if (1440 < width) {
                     console.log("Downscaling to 1440x2560");
                     await exec('ffmpeg -i input.mp4 -s 1440x2560 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear ./outputs/9.16/output_1440p.mp4')
                 }
-                if (2160 > width) {
+                if (2160 < width) {
                     console.log("Downscaling to 2160x3840");
                     await exec('ffmpeg -i input.mp4 -s 2160x3840 -shortest -preset ultrafast -threads 16 -sws_flags fast_bilinear  ./outputs/9.16/output_2160p.mp4')
                 }

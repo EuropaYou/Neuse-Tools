@@ -9,3 +9,5 @@ output.mp4
 .gitignore
 dump
 input
+old
+bin
