@@ -1,7 +1,10 @@
-# What is Neuse Tools?
 Neuse Tools is a Toolkit that Neuse is using. All of the tools are currently written in NodeJS and will writen in other langauges to improve performance.
 
 **YOU NEED TO DOWNLOAD FFMPEG, FFPROBE AND FFPLAY IN ORDER RUN THIS TOOLS! MOST OF THIS TOOLS DEPENDS ON THEM!**
+
+# What is Neuse Tools?
+Neuse Tools is a Toolkit that Neuse is using. All of the tools are currently written in NodeJS and will writen in other langauges to improve performance.
+
 
 # What is your priority?
 Our currently priority is performance. We will replace dependencies
@@ -15,46 +18,40 @@ Planned replace dependencies with our own tools are
 
 # What are the tools used in this Toolkit
 - convertToAV1
-- Converts video to AV1 codec
+-- Converts video to AV1 codec
 
 - convertToHevc
-- Converts video to HEVC(h.265) codec
+-- Converts video to HEVC(h.265) codec
 
 - createFile.js
-- creates dump files. For example if you want to create 5 100mb file you can create with this tool.
+-- creates dump files. For example if you want to create 5 100mb file you can create with this tool.
 
 - downscaler.js
-- Downscales a video.
+-- Downscales a video.
 
-- DuplicatedFileFinder.js
-- Checks if file is duplicate in folder.
+-upscaler.js
+-- Upscales a video.
 
-- fileName.js
-- Between two files if the name is same in folder.
+-player.js  
+-- Plays a video.
 
-- fileSize.js
-- Prints file size
+-spoilerBlocker.js
+-- Blocks spoiler by replacing characters.
 
-- imageDifference.js
-- Checks difference between two images.
+-subtitleGenarator.js
+-- Generates subtitles(Only SRT supported)
 
-- next-upsclaer.js
-- Upscales a video.
+-systemInfo.js
+-- Shows system information
 
-- player.js  
-- Plays a video.
+- video-recorder.js
+-- Video recorder. Records Webcam, Desktop and Apps
 
-- spoilerBlocker.js
-- Blocks spoiler by replacing characters.
+- websiteScrapper.js
+-- Scraps the website
 
-- systemInfo.js
-- Shows system information
+- wordCounter.js
+-- Counts words
 
-- upscaler.js
-- Upscales a video
-
-- video-recorder
-- Video recorder. Records Webcam, Desktop and Apps
-
-- websiteScrapper
-- Scraps the website
+- wordsToTime.js
+-- Converts words to time
