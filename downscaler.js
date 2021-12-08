@@ -7,7 +7,6 @@ var width;
 var height;
 var asprat = null;
 var t1;
-var t3 = 0;
 // TODO Change the aspect ratio
 function getVideoDetails() {
     return new Promise((resolve, reject) => {

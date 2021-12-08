@@ -58,8 +58,14 @@ async function captureWebcam(wbcm) {
     record the webcam
     */
 	await excfl("ffmpeg.exe", ["-list_options", "true", "-f", "dshow", "-i", "video=USB 2.0 Webcam Device"])
-    excfl("ffmpeg.exe", ["-f", "dshow", "-s", "1280x720", "-i", "video=USB 2.0 Webcam Device", "-b:v", "3M", "out.mkv"])
+    await excfl("ffmpeg.exe", ["-f", "dshow", "-s", "1280x720", "-i", "video=USB 2.0 Webcam Device", "-b:v", "3M", "out.mkv"])
 }
+async function captureWebcamMicrophone(wbcm) {
+    //await excfl("ffmpeg.exe", ["-list_options", "true", "-f", "dshow", "-i", "video=USB 2.0 Webcam Device"])
+    await excfl("ffmpeg.exe", ["-f", "dshow", "-s", "1280x720", "-i", "video=USB 2.0 Webcam Device", "-b:v", "3M", "out.mp4"])
+}
+
+
 async function captureDesktop(bitrate, filepath, filename, systemAudio, microphone, fps) {
     excfl("ffmpeg.exe", ["-f", "gdigrab", "-i", "desktop", "-b:v", "6M", "output.mp4"])
 }
@@ -70,4 +76,5 @@ function captureWebcamApp(wbcm, app) {}
 //takeScreenshotsOfDesktop(10, 4)
 //takeScreenshot()
 //captureDesktop()
-captureWebcam()
+//captureWebcam()
+captureWebcamMicrophone()

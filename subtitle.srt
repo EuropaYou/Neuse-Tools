@@ -1,0 +1,15 @@
+1
+00: 00: 07, 000 -- > 00: 00: 12, 000
+Senator, we're making our final approach into <bold>Coruscant</bold>.
+
+2
+00: 00: 12, 000 -- > 00: 00: 17, 000
+Very good, Lieutenant.
+
+3
+00: 00: 17, 000 -- > 00: 00: 22, 000
+Draw subtitles on top of input video using the libass library.This filter requires ffmpeg to be compiled with --enable - libass.See the ​subtitles video filter documentation for more details.
+
+4
+00: 00: 22, 000 -- > 00: 00: 27, 000
+If the subtitle is a separate file called subtitle.srt, you can use this command

@@ -1,7 +1,6 @@
 const fs = require("fs-extra");
 const util = require("util");
 const jimp = require("jimp")
-const sharp = require('sharp');
 
 const exec = require("child_process").exec;
 
@@ -20,7 +19,6 @@ const exec = require("child_process").exec;
         console.log("Rendering");
         const frames = fs.readdirSync("temp/raw-frames");
         for (let count = 1; count <= frames.length; count++) {
-            //await sharp(`temp/raw-frames/${count}.png`).resize(640, 480).toFile(`temp/edited-frames/${count}.png`, (err, info) => { if(err) throw err;});
             await jimp.read(`temp/raw-frames/${count}.png`, (err, lenna) => {
                 if (err) throw err;
                 lenna
