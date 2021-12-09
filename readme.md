@@ -1,4 +1,4 @@
-Neuse Tools is a Toolkit that Neuse is using. All of the tools are currently written in NodeJS and will writen in other langauges to improve performance.
+Neuse Tools is a toolkit that Neuse uses. You can improve the code or use it. All of the tools are currently written in NodeJS and will writen in other langauges to improve performance.
 
 **YOU NEED TO DOWNLOAD FFMPEG, FFPROBE AND FFPLAY IN ORDER RUN THIS TOOLS! MOST OF THIS TOOLS DEPENDS ON THEM!**
 
