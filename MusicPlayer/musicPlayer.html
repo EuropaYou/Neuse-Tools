@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    </head>
+    <body>
+        <video id="video" src="video.mp3"></video>
+        <div style="background-color: white; width:fit-content; border-radius: 32px;">
+            <img src="video.jpg">
+            <br>
+            <div style="text-align: center;">
+                <h1 style="margin: 0%;">Sabaton</h1>
+                <h3 style="margin: 0%;">Defence of Moscow</h3>
+                <h5 style="margin: 0%; margin-bottom: 16px;">Defence of Moscow</h5>
+            </div>
+            <div style="display: flex; width: 100%; justify-content: space-between; margin: 0%;">
+                <p id="cur" style="margin-left: 3%;"></p>
+                <p id="dur" style="float: right; margin-right: 3%;"></p>
+            </div>
+            <div>
+                <input type="range" id="pppp" style="width: 100%; margin: 0%;"></input>
+                <progress id="ppp" style="width: 100%; margin: 0%;"></progress>
+            </div>
+            <div style="display: flex;">
+                <p id="rem"></p>
+                <button style="border-radius: 360px; height: 48px; width: 48px; border: none; background-color: transparent;" id="ppvb" class="fas fa-volume-up"></button>
+                <input type="range" min="0" max="100" value="100" class="ppv" id="ppv">
+                <div>
+                    <button style="border-radius: 360px; height: 48px; width: 48px; border: none; background-color: transparent;" onclick="player_loop()" id="ppl" class="fas fa-repeat fa-1x"></button>
+                    <button style="border-radius: 360px; height: 48px; width: 48px; border: none; background-color: transparent;" onclick="player_shuffle()" id="pps" class="fas fa-random fa-1x"></button>
+                </div>
+            </div>
+            <div style="display:flex; justify-content: center;">
+                <button onclick="player_previous()" id="ppn" class="fas fa-fast-backward fa-2x player_button"></button>
+                <button onclick="player_previous()" id="ppn" class="fas fa-backward fa-2x player_button"></button>
+                <button onclick="player_play()" id="ppb" class="fas fa-play fa-2x player_button"></button>
+                <button onclick="player_next()" id="ppn" class="fas fa-forward fa-2x player_button"></button>
+                <button onclick="player_next()" id="ppn" class="fas fa-fast-forward fa-2x player_button"></button>
+            </div>
+        </div>
+    </body>
+    <script src="musicPlayer.js"></script>
+</html>

@@ -1,0 +1,28 @@
+    body {
+        background-color: #444;
+        color: black;
+    }
+    .ppv{
+        width: 25%;
+        height: 15px;
+        border-radius: 5px;  
+        outline: none;
+    }
+    .player_button {
+        border-radius: 360px;
+        height: 64px;
+        width: 64px;
+        border: none;
+        background-color: transparent;
+    }
+    .player_button:hover {
+        background-color: lightgray;
+    }
+
+    video{
+        width: 0%;
+    }
+
+    img{
+        width:472px
+    }
