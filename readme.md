@@ -1,3 +1,5 @@
+![Windows - Supported](https://img.shields.io/badge/Windows-Supported-blue?style=for-the-badge&logo=windows) ![Linux - Will be Supported](https://img.shields.io/badge/Linux-Will_be_Supported-orange?style=for-the-badge&logo=linux&logoColor=white) ![Mac - Will be Supported](https://img.shields.io/badge/Mac-Will_be_Supported-orange?style=for-the-badge&logo=apple&logoColor=white)
+
 Neuse Tools is a toolkit that Neuse uses. You can improve the code or use it. All of the tools are currently written in NodeJS and will writen in other langauges to improve performance.
 
 **YOU NEED TO DOWNLOAD FFMPEG, FFPROBE AND FFPLAY IN ORDER RUN THIS TOOLS! MOST OF THIS TOOLS DEPENDS ON THEM!**
