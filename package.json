@@ -10,13 +10,13 @@
     "license": "MIT",
     "dependencies": {
         "child_process": "^1.0.2",
-        "fs-extra": "^8.1.0",
-        "jimp": "^0.9.8",
-        "resemblejs": "^4.0.0",
+        "fs-extra": "^10.1.0",
+        "jimp": "^0.16.2",
+        "resemblejs": "^4.1.0",
         "sharp": "^0.29.2",
         "upscaler": "^0.8.27",
         "util": "^0.12.4",
-        "website-scraper": "^5.2.0"
+        "website-scraper": "^5.3.1"
     },
     "engines": {
         "node": "17.0.1"
