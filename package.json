@@ -13,7 +13,7 @@
         "fs-extra": "^10.1.0",
         "jimp": "^0.16.2",
         "resemblejs": "^4.1.0",
-        "sharp": "^0.29.2",
+        "sharp": "^0.32.6",
         "upscaler": "^0.8.27",
         "util": "^0.12.4",
         "website-scraper": "^5.3.1"
